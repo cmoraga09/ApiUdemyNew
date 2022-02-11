@@ -1,0 +1,92 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 7,
+        "name": "As a user, I can retrieve a Token when making a valid POST request.",
+        "description": "",
+        "id": "bravenewcoin-api-scenarios:-post-gettoken;as-a-user--i-can-retrieve-a-token-when-making-a-valid-post-request.",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 868273700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I have a valid API Key for the https://bravenewcoin.p.rapidapi.com URI",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://bravenewcoin.p.rapidapi.com",
+                  "offset": 31
+                }
+              ],
+              "location": "BraveNewCoinAPISteps.iSetTheRequestParams(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2299966800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I send a POST request with a valid TokenRequestBody payload to the /oauth/token endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "TokenRequestBody",
+                  "offset": 35
+                },
+                {
+                  "val": "/oauth/token",
+                  "offset": 67
+                }
+              ],
+              "location": "BraveNewCoinAPISteps.sendPOSTRequest(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1217200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I can validate I receive a valid token in the response",
+            "match": {
+              "location": "BraveNewCoinAPISteps.validateTheToken()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@BraveNewCoin"
+          },
+          {
+            "name": "@API"
+          }
+        ]
+      }
+    ],
+    "name": "BraveNewCoin API scenarios: POST GetToken",
+    "description": "    Rule: When I send a POST request to the endpoint, I receibe a token I can use to make further authenticated calls.",
+    "id": "bravenewcoin-api-scenarios:-post-gettoken",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/BraveNewCoin.feature",
+    "tags": [
+      {
+        "name": "@BraveNewCoin",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
